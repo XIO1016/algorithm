@@ -25,7 +25,7 @@ def bfs(x, y):
         x, y = q.popleft()
         for i in range(4):
             nx, ny = x + dx[i], y + dy[i]
-            if 0 <= nx < m and 0 <= ny < n and graph[x][y] == 0:
+            if 0 <= nx < m and 0 <= ny < n and graph[nx][ny] == 0:
                 graph[nx][ny] = 1
                 q.append((nx, ny))
                 size += 1
