@@ -11,6 +11,7 @@ while True:
     while len(n) > 0 and len(nums) > 0:
         if nums[0] == n[0]:
             nums = nums[1:]
+            print('nums: ', nums)
         n = n[1:]
         print('n: ', n)
     if nums == '':

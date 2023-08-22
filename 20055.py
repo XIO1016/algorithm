@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 n, k = map(int, input().split())
 
-a = deque(map(int, input().split()))
+a = deque(list(map(int, input().split())))
 robot = deque([0] * n)
 result = 0
 
@@ -16,7 +16,7 @@ while True:
 
     if sum(robot):
         for i in range(n - 2, -1, -1):
-            if robot[i] == i and robot[i + 1] == 0 and a[i + 1] >= 1:
+            if robot[i] == 1 and robot[i + 1] == 0 and a[i + 1] >= 1:
                 robot[i + 1] = 1
                 robot[i] = 0
                 a[i + 1] -= 1
