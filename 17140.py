@@ -29,18 +29,18 @@ if r < len(A) and c < len(A[0]):
     if A[r][c] == k:
         print(time)
         exit()
-    while True:
-        if len(A) >= len(A[0]):
-            R(A)
-        else:
-            A = list(map(list, zip(*A)))
-            R(A)
-            A = list(map(list, zip(*A)))
-        time += 1
-        if time > 100:
-            print(-1)
+while True:
+    if len(A) >= len(A[0]):
+        R(A)
+    else:
+        A = list(map(list, zip(*A)))
+        R(A)
+        A = list(map(list, zip(*A)))
+    time += 1
+    if time > 100:
+        print(-1)
+        exit()
+    if r < len(A) and c < len(A[0]):
+        if A[r][c] == k:
+            print(time)
             exit()
-        if r < len(A) and c < len(A[0]):
-            if A[r][c] == k:
-                print(time)
-                exit()
