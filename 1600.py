@@ -16,7 +16,7 @@ def bfs():
     q = deque([(0, 0, 0)])
     while q:
         x, y, a = q.popleft()
-        if x == w - 1 and y == h - 1:
+        if x == h - 1 and y == w - 1:
             return visited[x][y][a] - 1
         for i in range(4):
             nx, ny = x + d[i][0], y + d[i][1]
